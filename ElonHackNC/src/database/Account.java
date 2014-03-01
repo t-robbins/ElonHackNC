@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import beans.User;
+
 public class Account {
 	private Connection conn;
 
@@ -44,11 +46,16 @@ public class Account {
 			count = rs.getInt("count");
 		}
 
+
+		rs.close();
+		stmt.close();
+		
 		if (count == 0) {
 			return false;
 		} else {
 			return true;
 		}
+		
 	}
 	
 	public boolean usernameExists(String username) throws SQLException{
@@ -65,6 +72,9 @@ public class Account {
 		if (rs.next()) {
 			count = rs.getInt("count");
 		}
+
+		rs.close();
+		stmt.close();
 
 		if (count == 0) {
 			return false;
@@ -90,10 +100,39 @@ public class Account {
 			count = rs.getInt("count");
 		}
 
+		rs.close();
+		stmt.close();
+
 		if (count == 0) {
 			return false;
 		} else {
 			return true;
 		}
+	}
+	
+	public User getUser(String username) throws SQLException{
+		String sql = "select * from user_table where username=?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+
+		stmt.setString(1, username);
+		
+		ResultSet rs = stmt.executeQuery();
+		
+		User user = null;
+		
+		if(rs.next()){
+			String email = rs.getString("email");
+			String password = rs.getString("password");
+			String github = rs.getString("github");
+			String picture = rs.getString("picture");
+			String personalWeb = rs.getString("personal_site");
+			
+			user = new User(username, email, password, github, picture, personalWeb);
+			
+		}
+		rs.close();
+		stmt.close();
+		return user;
+		
 	}
 }
