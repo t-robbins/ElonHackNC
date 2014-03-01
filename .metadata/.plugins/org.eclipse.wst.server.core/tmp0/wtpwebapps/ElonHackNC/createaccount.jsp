@@ -5,7 +5,7 @@
 <c:import url="header.jsp">
 	<c:param name="title" value="Create an Account" />
 </c:import>
-
+ 
    
  
  <h2> Create your Account</h2>

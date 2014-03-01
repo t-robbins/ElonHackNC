@@ -6,10 +6,11 @@
 	<c:param name="title" value="Elon HackNC Homepage" />
 </c:import>
 
+
+
  <h2> Welcome To HackAnIdea</h2>
  <br />
  
- <a href ="${pageContext.request.contextPath}/Controller?action=login">Click here to login</a>
-  <br />
- <a href ="${pageContext.request.contextPath}/Controller?action=createaccount">Click here to create an account</a>
+ 
+
 <c:import url="footer.jsp" />
