@@ -22,7 +22,7 @@ import beans.User;
 import database.Account;
 
 /**
- * Servlet implementation class Controller
+ * Servlet implementation class Controller 
  */
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
