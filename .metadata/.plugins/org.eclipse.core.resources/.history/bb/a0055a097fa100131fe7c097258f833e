@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<c:import url="header.jsp">
+	<c:param name="title" value="Login to your account" />
+</c:import>
+
+   
+ 
+ <h2> Welcome To The Name of Our Idea?</h2>
+ <br />
+ 
+ Log in to your account
+    
+<c:import url="footer.jsp" />

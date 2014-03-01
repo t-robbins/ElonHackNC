@@ -1,0 +1,114 @@
+.attribution {
+	font-size: 14px;
+	color: gray;
+	font-face: italic;	
+}
+
+body { 
+	text-align: center; 
+}
+
+.brForImage{
+	margin-bottom:1px;
+}
+
+.content {  
+	top: 20px;
+	position: relative;
+	width: 100%; 
+	height: 100%; 
+	background: white; 
+	padding: 5px; 
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#footer {
+	position: relative;
+	top: 100px;
+	width: 90%;
+	background-color: white;
+	text-align: left;
+	border-top: 1px solid gray;
+	height: 30px;
+	margin-left: 5%;
+	font-size: 11px;
+	color: gray;
+}
+
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	height: 40px;
+	width: 100%;
+	text-align: left;
+}
+
+.headerWrapper {
+	margin: -5px -5px 0 -5px;
+	background-color: red;
+	text-align: center;
+}
+
+img {
+	border: none;
+}
+
+#imgtable {
+	position: relative;
+	top: 130px;
+	margin: 0 auto;
+}
+
+.images {
+	margin-left: auto;
+	margin-right: auto;
+	width: 640px;
+}
+
+#login {
+	position: absolute;
+	left: 910px;
+	top: 13px;
+}
+
+.rating {
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+}
+
+
+table{
+	border:none;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tbTextLogin {
+	font-size: 14px;
+	color: white;
+	font-weight: bold;
+}
+
+
+#title {
+	position: absolute;
+	left: 400px;
+	top: 9px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+
+#title1 {
+	position: relative;
+	top: 50px;
+}
+
