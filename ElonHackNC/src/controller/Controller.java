@@ -16,13 +16,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import beans.User;
 import database.Account;
 
 /**
- * Servlet implementation class Controller
+ * Servlet implementation class Controller 
  */
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
@@ -109,6 +110,7 @@ public class Controller extends HttpServlet {
                                                        throws ServletException,
                                                        IOException {
     	
+    	HttpSession session = request.getSession();
     	
 		String action = request.getParameter("action");
 
@@ -133,6 +135,10 @@ public class Controller extends HttpServlet {
 
 			try {
 				if (account.login(username, password)) {
+					
+					user = account.getUser(username);
+					session.setAttribute("user", user);
+					
 					request.getRequestDispatcher("/index.jsp").forward(
 							request, response);
 				} else {
