@@ -15,20 +15,27 @@
 </head>
 <body>
 
-	<div class="headerWrapper">
-		<div class="header">
-			<img src="${pageContext.request.contextPath}/images/logo.png" />
-
-			<c:if test="${ sessionScope.user.username == null}">
-				<a href="${pageContext.request.contextPath}/Controller?action=login">Click
-					here to login</a>
-				<br />
-				<a
-					href="${pageContext.request.contextPath}/Controller?action=createaccount">Click
-					here to create an account</a>
-
-			</c:if>
-
+<c:set var="currentPage" value="${ pageContext.request.requestURI }" scope="session" />
+	<div class="header">
+		<img src="${pageContext.request.contextPath}/images/hackthis_logo.png" height="35px"/>
+		<div class="headerRight">
+		<c:choose>
+			<c:when test="${ sessionScope.user.username == null}">
+					<a
+						href="${pageContext.request.contextPath}/Controller?action=login">
+						Login</a> | <a
+						href="${pageContext.request.contextPath}/Controller?action=createaccount">
+						Create Account</a>
+				
+			</c:when>
+			<c:otherwise>
+			
+				Welcome <a href="${pageContext.request.contextPath}/Controller?action=userprofile"> ${ sessionScope.user.username }</a>!
+				
+				| <a href="${pageContext.request.contextPath}/logout.jsp"> Logout</a>
+			</c:otherwise>
+			
+		</c:choose>
 		</div>
 	</div>
 

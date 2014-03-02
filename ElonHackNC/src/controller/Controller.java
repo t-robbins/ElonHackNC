@@ -25,11 +25,13 @@ import database.Account;
 /**
  * Servlet implementation class Controller 
  */
-@WebServlet("/Controller")
+@WebServlet("/portal")
 public class Controller extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private DataSource ds;
     private Map<String, String> actionMap = new HashMap<>();
+    HttpSession session;
+	
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -40,6 +42,8 @@ public class Controller extends HttpServlet {
         actionMap.put("index", "/index.jsp");
         actionMap.put("login", "/login.jsp");
         actionMap.put("createaccount", "/createaccount.jsp");
+        actionMap.put("userprofile", "/userprofile.jsp");
+        actionMap.put("error", "/error.jsp");
     }
 
     /**
@@ -73,7 +77,7 @@ public class Controller extends HttpServlet {
         // If the action parameter is null or the map doesn't contain
         // a page for this action, set the action to the home page
         if (action == null || !actionMap.containsKey(action))
-            action = "index";
+            action = "error";
 
         // Forward to the requested page.
         request.getRequestDispatcher(actionMap.get(action)).forward(request,
@@ -89,13 +93,14 @@ public class Controller extends HttpServlet {
                          HttpServletResponse response) throws ServletException,
                                                       IOException {
     	
-    	String action = request.getParameter("action");
+    	String action = request.getParameter("action");    	
     	
-    	  if (action == null || !actionMap.containsKey(action))
-              action = "index";
-
+    	if(action == null || !actionMap.containsKey(action)){
+    		action = "error";
+    	}
+ 
           // Forward to the requested page.
-          request.getRequestDispatcher(actionMap.get(action)).forward(request,
+          request.getRequestDispatcher("/error.jsp").forward(request,
               response);
         
     }
@@ -110,7 +115,6 @@ public class Controller extends HttpServlet {
                                                        throws ServletException,
                                                        IOException {
     	
-    	HttpSession session = request.getSession();
     	
 		String action = request.getParameter("action");
 
@@ -201,7 +205,7 @@ public class Controller extends HttpServlet {
 			
 		}
 		else {
-			return;
+			request.getRequestDispatcher("/error.jsp").forward(request,response);
 		}
 
 		try {
