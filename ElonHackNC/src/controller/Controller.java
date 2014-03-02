@@ -97,6 +97,9 @@ public class Controller extends HttpServlet {
     	
     	if(action == null || !actionMap.containsKey(action)){
     		action = "error";
+    	} else if(action.equals("userprofile")){
+    		request.getRequestDispatcher("/userprofile.jsp").forward(request,
+    	              response);
     	}
  
           // Forward to the requested page.
@@ -206,10 +209,18 @@ public class Controller extends HttpServlet {
 				}
 			}
 			
+<<<<<<< HEAD
+		} else if(action.equals("userprofile")){
+    		request.getRequestDispatcher("/userprofile.jsp").forward(request,
+  	              response);
+		} else {
+			request.getRequestDispatcher("/error.jsp").forward(request,response);
+=======
 		}
 		else {
 			request.getRequestDispatcher(actionMap.get(action)).forward(request,
 		            response);
+>>>>>>> origin/master
 		}
 
 		try {
