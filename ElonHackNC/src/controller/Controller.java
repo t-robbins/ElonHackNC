@@ -103,8 +103,8 @@ public class Controller extends HttpServlet {
     	}
  
           // Forward to the requested page.
-          request.getRequestDispatcher("/error.jsp").forward(request,
-              response);
+    	request.getRequestDispatcher(actionMap.get(action)).forward(request,
+                response);
         
     }
 
@@ -143,6 +143,8 @@ public class Controller extends HttpServlet {
 			try {
 				if (account.login(username, password)) {
 					
+					session=request.getSession();
+					
 					user = account.getUser(username);
 					session.setAttribute("user", user);
 					
@@ -179,6 +181,7 @@ public class Controller extends HttpServlet {
 				
 				if(!user.validate()){
 					//password or email have wrong format
+					request.setAttribute("username", username);
 					request.setAttribute("password", password);
 					request.setAttribute("message", user.getMessage());
 					request.getRequestDispatcher("/createaccount.jsp").forward(request,response);
@@ -197,7 +200,7 @@ public class Controller extends HttpServlet {
 						}
 						else{
 							account.create(username, email,password);
-							request.getRequestDispatcher("/createsuccess.jsp").forward(request,response);
+							request.getRequestDispatcher("/index.jsp").forward(request,response);
 						}
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
@@ -206,11 +209,18 @@ public class Controller extends HttpServlet {
 				}
 			}
 			
+<<<<<<< HEAD
 		} else if(action.equals("userprofile")){
     		request.getRequestDispatcher("/userprofile.jsp").forward(request,
   	              response);
 		} else {
 			request.getRequestDispatcher("/error.jsp").forward(request,response);
+=======
+		}
+		else {
+			request.getRequestDispatcher(actionMap.get(action)).forward(request,
+		            response);
+>>>>>>> origin/master
 		}
 
 		try {
