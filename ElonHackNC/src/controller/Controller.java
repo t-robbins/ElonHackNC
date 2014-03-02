@@ -178,6 +178,7 @@ public class Controller extends HttpServlet {
 				
 				if(!user.validate()){
 					//password or email have wrong format
+					request.setAttribute("username", username);
 					request.setAttribute("password", password);
 					request.setAttribute("message", user.getMessage());
 					request.getRequestDispatcher("/createaccount.jsp").forward(request,response);
