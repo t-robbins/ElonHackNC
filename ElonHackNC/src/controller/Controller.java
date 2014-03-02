@@ -25,7 +25,7 @@ import database.Account;
 /**
  * Servlet implementation class Controller 
  */
-@WebServlet("/portal")
+@WebServlet("/Controller")
 public class Controller extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private DataSource ds;
@@ -100,8 +100,8 @@ public class Controller extends HttpServlet {
     	}
  
           // Forward to the requested page.
-          request.getRequestDispatcher("/error.jsp").forward(request,
-              response);
+    	request.getRequestDispatcher(actionMap.get(action)).forward(request,
+                response);
         
     }
 
@@ -139,6 +139,8 @@ public class Controller extends HttpServlet {
 
 			try {
 				if (account.login(username, password)) {
+					
+					session=request.getSession();
 					
 					user = account.getUser(username);
 					session.setAttribute("user", user);
@@ -205,7 +207,8 @@ public class Controller extends HttpServlet {
 			
 		}
 		else {
-			request.getRequestDispatcher("/error.jsp").forward(request,response);
+			request.getRequestDispatcher(actionMap.get(action)).forward(request,
+		            response);
 		}
 
 		try {
