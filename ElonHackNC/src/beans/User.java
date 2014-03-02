@@ -15,6 +15,7 @@ public class User {
 	private String github = "";
 	private String pictureURL = "";
 	private String personalWeb = "";
+	private String aboutMe = "";
 
 	public User() {
 
@@ -68,6 +69,44 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+
+	public String getAboutMe() {
+		return aboutMe;
+	}
+
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+	
+
+	public String getGithub() {
+		return github;
+	}
+
+	public void setGithub(String github) {
+		this.github = github;
+	}
+
+	public String getPictureURL() {
+		return pictureURL;
+	}
+
+	public void setPictureURL(String pictureURL) {
+		this.pictureURL = pictureURL;
+	}
+
+	public String getPersonalWeb() {
+		return personalWeb;
+	}
+
+	public void setPersonalWeb(String personalWeb) {
+		this.personalWeb = personalWeb;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public boolean validate() {
