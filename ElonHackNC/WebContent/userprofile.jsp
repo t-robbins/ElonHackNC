@@ -9,9 +9,8 @@
 
 <sql:setDataSource var="ds" dataSource="jdbc/elonhackdb" />
 
-<!--  c:set scope="page" var="user" value="${session.user}" /-->
-<c:set scope="page" var="user" value="<%User user = new User("ewalmer",
-		"ewalmer@elon.edu", "password", "git.hub/ewalmer", "", "www.elon.edu")%>" />
+<c:set scope="page" var="user" value="${session.user}" />
+
 <c:choose>
 	<c:when test="${not empty user }">
 		<table class="userTable">
@@ -60,10 +59,7 @@
 
 	</c:when>
 	<c:otherwise>
-		<%
-			request.getRequestDispatcher("/Controller").forward(
-								request, response);
-		%>
+		
 	</c:otherwise>
 </c:choose>
 <br />
