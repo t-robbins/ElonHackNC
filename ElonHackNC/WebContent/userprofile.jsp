@@ -59,7 +59,7 @@
 
 	</c:when>
 	<c:otherwise>
-		
+		<c:redirect url="/error.jsp"/>
 	</c:otherwise>
 </c:choose>
 <br />
