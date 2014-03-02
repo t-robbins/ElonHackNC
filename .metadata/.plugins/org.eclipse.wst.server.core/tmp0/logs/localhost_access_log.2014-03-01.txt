@@ -1711,3 +1711,9 @@
 0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:04:53 -0500] "GET /ElonHackNC/images/logo.png HTTP/1.1" 404 1003
 0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:04:55 -0500] "GET /ElonHackNC/Controller?action=fdafdas HTTP/1.1" 200 837
 0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:04:55 -0500] "GET /ElonHackNC/images/logo.png HTTP/1.1" 404 1003
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:09:05 -0500] "GET /ElonHackNC/error.jsp HTTP/1.1" 200 919
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:09:05 -0500] "GET /ElonHackNC/images/logo.png HTTP/1.1" 404 1003
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:09:05 -0500] "GET /ElonHackNC/images/404.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:16:05 -0500] "GET /ElonHackNC/bubble.jsp HTTP/1.1" 200 1705
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:16:05 -0500] "GET /ElonHackNC/images/logo.png HTTP/1.1" 404 1003
+0:0:0:0:0:0:0:1 - - [01/Mar/2014:22:16:05 -0500] "GET /ElonHackNC/style/style.css HTTP/1.1" 304 -
