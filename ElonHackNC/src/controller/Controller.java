@@ -194,7 +194,7 @@ public class Controller extends HttpServlet {
 						}
 						else{
 							account.create(username, email,password);
-							request.getRequestDispatcher("/createsuccess.jsp").forward(request,response);
+							request.getRequestDispatcher("/index.jsp").forward(request,response);
 						}
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
