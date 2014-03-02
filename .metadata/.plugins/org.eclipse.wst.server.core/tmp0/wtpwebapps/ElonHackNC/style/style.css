@@ -6,6 +6,16 @@
 
 body { 
 	text-align: center; 
+	
+}
+
+.screenshot {
+	border: 1px solid #aaaaaa;
+	width: 70%;
+	height: 60%;
+	margin-left: auto;
+        margin-right: auto;
+	
 }
 
 .brForImage{
@@ -20,13 +30,13 @@ body {
 	background: white; 
 	padding: 5px; 
 	margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+        margin-right: auto;
+        text-align: center;
 }
 
 #footer {
 	position: relative;
-	top: 100px;
+	/* top: 200px; */
 	width: 90%;
 	background-color: white;
 	text-align: left;
@@ -47,10 +57,11 @@ body {
 	background-color: #CD8CFF;
 }
 
-.headerRight{
-	text-align:right;
+.headerRight {
+	text-align: right;
 	margin-right: 10px;
 }
+
 
 img {
 	border: none;
@@ -95,6 +106,44 @@ table{
 }
 
 
+
+.ui-accordion {
+	border: 1px solid #aaaaaa;
+	color: black;
+	width: 80%;
+	margin-left: auto;
+        margin-right: auto;
+        
+        
+}
+.ui-accordion-header{
+	background-color: #ccc;  
+        margin: 0px;
+        color: #fff;  
+        line-height: 42px;  
+        display: block;  
+        font-size: 12pt;  
+        width: 100%;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);  
+    border-right: 1px solid rgba(0, 0, 0, .2);  
+    border-left: 1px solid rgba(0, 0, 0, .2);  
+    border-bottom: 1px solid rgba(0, 0, 0, .2);  
+    border-top: 1px solid rgba(250, 250, 250, .2);    
+	
+}
+.ui-accordion-content{
+	/* color: red;
+        background-color: #FFBD57; */
+	width: 100%;  
+        background-color: #f3f3f3;  
+        color: #777;  
+        font-size: 14pt;  
+        line-height: 16pt;
+        box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, .4),  
+                inset 0px 1px 1px 0px rgba(0, 0, 0, .2);  
+}
+
 #title {
 	position: absolute;
 	left: 400px;
@@ -105,9 +154,11 @@ table{
 	text-align: center;
 }
 
-
 #title1 {
 	position: relative;
 	top: 50px;
 }
+
+
+
 

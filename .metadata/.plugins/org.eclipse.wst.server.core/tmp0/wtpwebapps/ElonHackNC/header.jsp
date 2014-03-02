@@ -17,7 +17,7 @@
 
 <c:set var="currentPage" value="${ pageContext.request.requestURI }" scope="session" />
 	<div class="header">
-		<img src="${pageContext.request.contextPath}/images/logo.png" />
+		<img src="${pageContext.request.contextPath}/images/hackthis_logo.png" height="35px"/>
 		<div class="headerRight">
 		<c:choose>
 			<c:when test="${ sessionScope.user.username == null}">
@@ -33,7 +33,6 @@
 				Welcome <a href="${pageContext.request.contextPath}/Controller?action=userprofile"> ${ sessionScope.user.username }</a>!
 				
 				| <a href="${pageContext.request.contextPath}/logout.jsp"> Logout</a>
-				<c:out value="${sessionScope.currentPage }" />
 			</c:otherwise>
 			
 		</c:choose>

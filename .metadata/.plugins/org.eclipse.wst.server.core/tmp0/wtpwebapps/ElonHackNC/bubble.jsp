@@ -12,8 +12,7 @@
 
 </c:forEach>
 
-<form method="post" action='<%=response.encodeUrl(request.getContextPath()
-                + "/Controller?action=subtopic")%>'>
+<form method="post" action='<%=request.getContextPath() + "/Controller?action=subtopic"%>'>
                 
                 <input type="hidden" name="action" value="subtopic" />
                 
