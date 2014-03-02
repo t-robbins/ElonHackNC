@@ -39,18 +39,17 @@ body {
 
 
 .header {
-	position: relative;
 	margin: 0 auto;
 	display: block;
-	height: 40px;
+	height: 80px;
 	width: 100%;
 	text-align: left;
+	background-color: #CD8CFF;
 }
 
-.headerWrapper {
-	margin: -5px -5px 0 -5px;
-	background-color: red;
-	text-align: center;
+.headerRight{
+	text-align:right;
+	margin-right: 10px;
 }
 
 img {
